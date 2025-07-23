@@ -35,14 +35,14 @@ public struct ColorModel: Hashable {
         // MARK: - Properties
         
         /// The name of the component.
-        var name: String
-        
+        public internal(set) var name: String
+
         /// The abbreviation of the component.
-        var abbreviation: String
-        
+        public internal(set) var abbreviation: String
+
         /// The description of the component.
-        var description: String
-        
+        public internal(set) var description: String
+
     }
     
     // MARK: - Properties
