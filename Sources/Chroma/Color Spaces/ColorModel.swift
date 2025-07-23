@@ -26,14 +26,14 @@
 
 /// Describes how colors are represented as a collection of values.
 public struct ColorModel: Hashable {
-    
+
     // MARK: - Types
-    
+
     /// Information about a single value of a color model.
     public struct Component: Hashable {
-        
+
         // MARK: - Properties
-        
+
         /// The name of the component.
         public internal(set) var name: String
 
@@ -44,20 +44,20 @@ public struct ColorModel: Hashable {
         public internal(set) var description: String
 
     }
-    
+
     // MARK: - Properties
-    
+
     /// The number of components in the color model.
     public var numberOfComponents: Int
-    
+
     /// The name of the color model.
     public var name: String
-    
+
     /// The model's components.
     public var components: [Component]
-    
+
     // MARK: - Initialization
-    
+
     /// Create a new color model.
     /// - Parameters:
     ///   - name: The name of the color model.
@@ -67,5 +67,9 @@ public struct ColorModel: Hashable {
         self.components = components
         self.numberOfComponents = components.count
     }
-    
+
+}
+
+public extension ColorModel.Component {
+    static let opacity = ColorModel.Component(name: "opacity", abbreviation: "A", description: "")
 }
